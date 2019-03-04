@@ -128,7 +128,7 @@ ElemType PriorElem_L(LinkList list, ElemType next){
     LinkList pTemp = list;
     LinkList prev = NULL;
     if(list->data == next){
-        printf("该节点没有前驱节点！\n")
+        printf("该节点没有前驱节点！\n");
     }
     prev = pTemp;
     pTemp = pTemp->next;
