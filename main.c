@@ -1,7 +1,15 @@
 #include <stdio.h>
 #include "SqList.h"
+#include "LinkList.h"
+
+void testLinkList();
 
 int main() {
+    testLinkList();
+    return 0;
+}
+
+void testSqList(){
     SqList list = InitList_Sq();
     ElemType a[] = {1,2,3,4,5};
 
@@ -13,5 +21,14 @@ int main() {
 
     ListInverse_Sq(list);
     ListOutput_Sq(list);
-    return 0;
+}
+
+void testLinkList(){
+    LinkList  list = CreateList_L();
+    ListInsert_L(list, 1, 1);
+    ListInsert_L(list, 1, 2);
+    ListInsert_L(list, 1, 3);
+    ListInsert_L(list, 1, 4);
+    ListInsert_L(list, 1, 5);
+    ListOutput(list);
 }
