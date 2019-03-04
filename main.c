@@ -3,9 +3,10 @@
 #include "LinkList.h"
 
 void testLinkList();
+void testSqList();
 
 int main() {
-    testLinkList();
+    testSqList();
     return 0;
 }
 
@@ -17,10 +18,10 @@ void testSqList(){
         ListInsert_Sq(list,i,a[i]);
     }
     ListInsert_Sq(list,2,100);
+    ListDelete_Sq(list,2);
     ListOutput_Sq(list);
+    printf("\n%d", GetElem_Sq(list,2));
 
-    ListInverse_Sq(list);
-    ListOutput_Sq(list);
 }
 
 void testLinkList(){

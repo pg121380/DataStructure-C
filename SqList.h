@@ -25,5 +25,11 @@ SqList InitList_Sq();
 void ListOutput_Sq(SqList list);
 int ListInsert_Sq(SqList list, int pos, ElemType item);
 void ListInverse_Sq(SqList list);
+ElemType ListDelete_Sq(SqList list, int pos);
+ElemType GetElem_Sq(SqList list, int pos);
+int GetElemIndex_Sq(SqList list, ElemType item);
+void ClearList_Sq(SqList list);
+ElemType PriorElem_Sq(SqList list, ElemType next);
+ElemType NextElem_Sq(SqList list, ElemType prev);
 
 #endif //WORKPLACE_CLION_SQLIST_H

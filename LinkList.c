@@ -86,3 +86,7 @@ void ListInverse_L(LinkList list){
         list->next = s;
     }
 }
+
+void DestoryList_L(LinkList list){
+
+}
