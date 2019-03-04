@@ -31,5 +31,6 @@ int GetElemIndex_Sq(SqList list, ElemType item);
 void ClearList_Sq(SqList list);
 ElemType PriorElem_Sq(SqList list, ElemType next);
 ElemType NextElem_Sq(SqList list, ElemType prev);
-
+int ListEmpty_Sq(SqList list);
+int ListLength_Sq(SqList list);
 #endif //WORKPLACE_CLION_SQLIST_H

@@ -21,4 +21,10 @@ void ListOutput(LinkList list);
 ElemType GetElem_L(LinkList list, int pos);
 ElemType ListDelete_L(LinkList list, int pos);
 void ListInverse_L(LinkList list);
+void DestoryList_L(LinkList list);
+void ClearList_L(LinkList list);
+int ListEmpty_L(LinkList list);
+int ListLength_L(LinkList list);
+ElemType PriorElem_L(LinkList list, ElemType next);
+ElemType NextElem_L(LinkList list, ElemType prev);
 #endif //WORKPLACE_CLION_LINKLIST_H

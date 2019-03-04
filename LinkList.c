@@ -88,5 +88,71 @@ void ListInverse_L(LinkList list){
 }
 
 void DestoryList_L(LinkList list){
+    LinkList pTemp = list;
+    while(pTemp->next != NULL){
+        LinkList next = pTemp->next;
+        free(pTemp);
+        pTemp = next;
+    }
+}
 
+void ClearList_L(LinkList list){
+    if(list->next != NULL){
+        DestoryList_L(list->next);
+        list->data = NULL;
+        list->next = NULL;
+    } else {
+        list->data = NULL;
+    }
+}
+
+int ListEmpty_L(LinkList list){
+    if(list->next == NULL && list->data == NULL){
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
+
+int ListLength_L(LinkList list){
+    int length = 1;
+    LinkList pTemp = list;
+    while(pTemp != NULL){
+        pTemp = pTemp->next;
+        length++;
+    }
+    return length;
+}
+
+ElemType PriorElem_L(LinkList list, ElemType next){
+    LinkList pTemp = list;
+    LinkList prev = NULL;
+    if(list->data == next){
+        printf("该节点没有前驱节点！\n")
+    }
+    prev = pTemp;
+    pTemp = pTemp->next;
+    while(pTemp != NULL){
+        if(pTemp->data == next){
+            return prev->data;
+        } else {
+            prev = pTemp;
+            pTemp = pTemp->next;
+        }
+    }
+}
+ElemType NextElem_L(LinkList list, ElemType prev){
+    LinkList pTemp = list;
+    while(pTemp != NULL){
+        if(pTemp->data == prev){
+            if(pTemp->next != NULL){
+                return pTemp->next->data;
+            } else {
+                printf("该节点没有后继节点！\n");
+                return NULL;
+            }
+        } else {
+            pTemp = pTemp->next;
+        }
+    }
 }

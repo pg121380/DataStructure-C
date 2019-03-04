@@ -140,3 +140,11 @@ ElemType NextElem_Sq(SqList list, ElemType prev){
         return list->elem[index + 1];
     }
 }
+
+int ListEmpty_Sq(SqList list){
+    return list->length == 0 ? TRUE : FALSE;
+}
+
+int ListLength_Sq(SqList list){
+    return list->length;
+}

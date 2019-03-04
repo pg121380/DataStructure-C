@@ -6,7 +6,7 @@ void testLinkList();
 void testSqList();
 
 int main() {
-    testSqList();
+    testLinkList();
     return 0;
 }
 
@@ -34,4 +34,5 @@ void testLinkList(){
     ListOutput(list);
     ListInverse_L(list);
     ListOutput(list);
+    DestoryList_L(list);
 }
