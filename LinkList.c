@@ -56,3 +56,33 @@ ElemType GetElem_L(LinkList list, int pos){
     }
     return pTemp->data;
 }
+
+ElemType ListDelete_L(LinkList list, int pos){
+    LinkList pTemp = list;
+    int i = 0;
+    while((pTemp->next != NULL) && i < pos - 1){
+        pTemp = pTemp->next;
+        i++;
+    }
+    if((pTemp->next == NULL) || i > pos - 1){
+        printf("输入位置非法！\n");
+        return FALSE;
+    }
+    LinkList q = pTemp->next;
+    pTemp->next = q->next;
+    int value = q->data;
+    free(q);
+    return value;
+}
+
+void ListInverse_L(LinkList list){
+    LinkList s = NULL;
+    LinkList p = list->next;
+    list->next = NULL;
+    while(p != NULL){
+        s = p;
+        p = p->next;
+        s->next = list->next;
+        list->next = s;
+    }
+}

@@ -19,4 +19,6 @@ LinkList CreateList_L();
 int ListInsert_L(LinkList list, int pos, ElemType item);
 void ListOutput(LinkList list);
 ElemType GetElem_L(LinkList list, int pos);
+ElemType ListDelete_L(LinkList list, int pos);
+void ListInverse_L(LinkList list);
 #endif //WORKPLACE_CLION_LINKLIST_H

@@ -31,4 +31,6 @@ void testLinkList(){
     ListInsert_L(list, 1, 4);
     ListInsert_L(list, 1, 5);
     ListOutput(list);
+    ListInverse_L(list);
+    ListOutput(list);
 }
