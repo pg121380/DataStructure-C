@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include "SqList.h"
 #include "LinkList.h"
+#include "LinkQueue.h"
 
 void testLinkList();
 void testSqList();
 
 int main() {
-    testLinkList();
+    InitQueue_L();
     return 0;
 }
 
