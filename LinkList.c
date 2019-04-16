@@ -99,15 +99,15 @@ void DestoryList_L(LinkList list){
 void ClearList_L(LinkList list){
     if(list->next != NULL){
         DestoryList_L(list->next);
-        list->data = NULL;
+        list->data = 0;
         list->next = NULL;
     } else {
-        list->data = NULL;
+        list->data = 0;
     }
 }
 
 int ListEmpty_L(LinkList list){
-    if(list->next == NULL && list->data == NULL){
+    if(list->next == NULL && list->data == 0){
         return TRUE;
     } else {
         return FALSE;
@@ -115,7 +115,7 @@ int ListEmpty_L(LinkList list){
 }
 
 int ListLength_L(LinkList list){
-    int length = 1;
+    int length = 0;
     LinkList pTemp = list;
     while(pTemp != NULL){
         pTemp = pTemp->next;
@@ -149,7 +149,7 @@ ElemType NextElem_L(LinkList list, ElemType prev){
                 return pTemp->next->data;
             } else {
                 printf("该节点没有后继节点！\n");
-                return NULL;
+                return 0;
             }
         } else {
             pTemp = pTemp->next;

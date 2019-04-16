@@ -2,12 +2,14 @@
 #include "SqList.h"
 #include "LinkList.h"
 #include "LinkQueue.h"
+#include "Stack.h"
 
 void testLinkList();
 void testSqList();
+void testStack();
 
 int main() {
-    InitQueue_L();
+    testStack();
     return 0;
 }
 
@@ -36,4 +38,20 @@ void testLinkList(){
     ListInverse_L(list);
     ListOutput(list);
     DestoryList_L(list);
+}
+
+void testStack(){
+    LinkStack* stack = CreateStack();
+    Push(1, stack);
+    Push(2, stack);
+    Push(3, stack);
+    Push(4, stack);
+    Push(5, stack);
+    Push(6, stack);
+    Push(7, stack);
+
+    while(!isEmpty(stack)){
+        printf("%d\n", Pop(stack));
+    }
+
 }

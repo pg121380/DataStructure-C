@@ -3,4 +3,4 @@ project(workplace_clion C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(workplace_clion main.c SqList.h SqList.c LinkList.h LinkList.c)
+add_executable(workplace_clion main.c SqList.h SqList.c LinkList.h LinkList.c LinkQueue.h LinkQueue.c Stack.h Stack.c)
