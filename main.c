@@ -3,13 +3,15 @@
 #include "LinkList.h"
 #include "LinkQueue.h"
 #include "Stack.h"
+#include "BinTree.h"
 
 void testLinkList();
 void testSqList();
 void testStack();
+void testTree();
 
 int main() {
-    testStack();
+    testTree();
     return 0;
 }
 
@@ -54,4 +56,14 @@ void testStack(){
         printf("%d\n", Pop(stack));
     }
 
+}
+
+void testTree(){
+    BinTree tree = createBinTree();
+    printf("----------preOrderTraverse----------\n");
+    preOrderTraverse(tree);
+    printf("----------inOrderTraverse----------\n");
+    inOrderTraverse(tree);
+    printf("----------postOrderTraverse----------\n");
+    postOrderTraverse(tree);
 }

@@ -4,13 +4,17 @@
 
 #ifndef UNTITLED_STACK_H
 #define UNTITLED_STACK_H
+
+typedef int ElementType;
+
 typedef struct Node{
-    int Data;
+    ElementType Data;
     struct Node *Next;
 }LinkStack;
 
 LinkStack *CreateStack();
 int isEmpty(LinkStack*);
 void Push(int,LinkStack*);
-int Pop(LinkStack*);
+ElementType Pop(LinkStack*);
+ElementType getTop(LinkStack *Stack);
 #endif //UNTITLED_STACK_H
