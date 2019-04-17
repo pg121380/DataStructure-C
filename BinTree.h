@@ -14,4 +14,6 @@ BinTree createBinTree();
 void preOrderTraverse(BinTree tree);
 void inOrderTraverse(BinTree tree);
 void postOrderTraverse(BinTree tree);
+void inOrderTraverseWithoutRecurrence(BinTree tree);        // 中序遍历的非递归实现
+
 #endif //WORKPLACE_CLION_BINTREE_H

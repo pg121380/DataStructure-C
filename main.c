@@ -12,6 +12,7 @@ void testTree();
 
 int main() {
     testTree();
+    getchar();
     return 0;
 }
 
@@ -66,4 +67,6 @@ void testTree(){
     inOrderTraverse(tree);
     printf("----------postOrderTraverse----------\n");
     postOrderTraverse(tree);
+    printf("----------inOrderTraverseWithoutRecurrence----------\n");
+    inOrderTraverseWithoutRecurrence(tree);
 }
