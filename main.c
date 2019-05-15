@@ -4,15 +4,16 @@
 #include "LinkQueue.h"
 #include "Stack.h"
 #include "BinTree.h"
+#include "algorithms/BinarySearch.h"
 
 void testLinkList();
 void testSqList();
 void testStack();
 void testTree();
+void testBinarySearch();
 
 int main() {
-    testTree();
-    getchar();
+   testBinarySearch();
     return 0;
 }
 
@@ -69,4 +70,11 @@ void testTree(){
     postOrderTraverse(tree);
     printf("----------inOrderTraverseWithoutRecurrence----------\n");
     inOrderTraverseWithoutRecurrence(tree);
+}
+
+void testBinarySearch(){
+   int arr[] = {1,2,4,3,5,6,7,8,9,0};
+   int length = sizeof(arr) / sizeof(arr[0]);
+   int index = binarySearch(arr, length, 0);
+   printf("%d\n", index);
 }
